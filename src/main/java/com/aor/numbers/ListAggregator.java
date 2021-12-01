@@ -53,25 +53,24 @@ public class ListAggregator {
      * Counts the number of distinct numbers in a list.
      * @return The number of distinct numbers.
      */
-    public int distinct(List<Integer> list, ListDeduplicator deduplicator) {
+    public int distinct(List<Integer> list, GenericListDeduplicator deduplicator) {
 
-
+        List<Integer> distinct = deduplicator.deduplicate(list);
         // STUB
         // um listDeduplicator falso que devolve o valor que deveria devolver tendo
         //em conta a lista usada nos testes ({1,2,4,2})
-        class stub_listDeduplicator {
+        /*class stub_listDeduplicator {
             public List<Integer> deduplicate(List<Integer> list){
                 List<Integer> l = Arrays.asList(1,2,4);
                 return l;
             }
-        }
+        }*/
         // agora o método distinct vai estar a trabalhar sempre com os valores corretos
         //pois o stub_listDeduplicator devolve sempre o  valor correto
         // se mesmo com dados corretos o teste falhar sabemos que o erro está no code
         // do método distinct, se o teste agora passar sabemos que o erro está no code
         // do metodo da class listDeduplicator deduplicate().
 
-        stub_listDeduplicator s = new stub_listDeduplicator();
-        return s.deduplicate(list).size();
+        return distinct.size();
     }
 }
