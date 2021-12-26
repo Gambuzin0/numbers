@@ -52,7 +52,7 @@ public class ListAggregatorTest {
         ListDeduplicator deduplicator = new ListDeduplicator(new ListSorter());
         int distinct = aggregator.distinct(list_for_tests,deduplicator);
 
-        Assertions.assertEquals(3, distinct);
+        Assertions.assertEquals(4, distinct);
     }
 
     @Test
